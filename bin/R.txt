@@ -358,11 +358,11 @@ int id action_menu_presenter 0x7f05001b
 int id action_mode_bar 0x7f05002e
 int id action_mode_bar_stub 0x7f05002d
 int id action_mode_close_button 0x7f050020
-int id action_settings 0x7f050041
+int id action_settings 0x7f050042
 int id activity_chooser_view_content 0x7f050021
 int id always 0x7f05000d
 int id beginning 0x7f050012
-int id button1 0x7f05003f
+int id button1 0x7f050040
 int id checkbox 0x7f050029
 int id collapseActionView 0x7f05000f
 int id decor_content_parent 0x7f05002f
@@ -388,6 +388,7 @@ int id normal 0x7f050001
 int id progress_circular 0x7f05001c
 int id progress_horizontal 0x7f05001d
 int id radio 0x7f05002b
+int id scrollView1 0x7f05003f
 int id search_badge 0x7f050035
 int id search_bar 0x7f050034
 int id search_button 0x7f050036
@@ -405,7 +406,7 @@ int id showTitle 0x7f050008
 int id split_action_bar 0x7f050019
 int id submit_area 0x7f05003c
 int id tabMode 0x7f050003
-int id textView1 0x7f050040
+int id textView1 0x7f050041
 int id title 0x7f050027
 int id up 0x7f050016
 int id useLogo 0x7f050005
