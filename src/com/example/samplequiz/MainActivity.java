@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import android.support.v7.app.ActionBarActivity;
@@ -17,14 +18,14 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 	
-	String url="http://www.androidbegin.com";
-
+	String url="http://indiabusinessquiz.com/";
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-	}
+			}
 	
 	public void goquiz(View v)
 	{
@@ -34,6 +35,12 @@ public class MainActivity extends ActionBarActivity {
 	private class quiz extends AsyncTask<Void,Void,Void>
 	{ String quizt;
      
+	 
+		@Override
+		protected void onPreExecute(){
+			super.onPreExecute();
+			
+		}
 		@Override
 		protected Void doInBackground(Void... params) {
 			// TODO Auto-generated method stub
@@ -42,9 +49,8 @@ public class MainActivity extends ActionBarActivity {
 				/*Elements quiztext=document.select("div.entry clearfix");
 				quizt=quiztext.attr("strong");
 				*/
-				Elements description = document
-						.select("meta[name=description]");
-					quizt = description.attr("content");
+				Element description = document.select("div[class=entry clearfix]").first();
+					quizt = description.text();
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -59,6 +65,7 @@ public class MainActivity extends ActionBarActivity {
 		
 		TextView tv=(TextView) findViewById(R.id.textView1);
 		tv.setText(quizt);
+		
 	}
 }
 }
